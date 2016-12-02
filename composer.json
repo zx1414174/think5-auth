@@ -1,0 +1,17 @@
+{
+    "name": "zx1414174/think5-auth",
+    "description": "The ThinkPHP5 think5-auth Package.",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "zx1414174",
+            "email": "542506511@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "think5\\auth\\": ""
+        }
+    }
+}
