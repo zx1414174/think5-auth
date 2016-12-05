@@ -13,7 +13,9 @@
 ## 配置 v1.1
 ~~~
 'think5' =>[
-        'style_directory' => '/static/admin/'
+        'style_directory' => '/static/rbac/',
+        //包数据表前缀，基本配置的前缀在此前缀之前加入
+        'database_prefix' => '',
   ]
 ~~~
 

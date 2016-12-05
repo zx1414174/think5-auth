@@ -2,16 +2,19 @@
 namespace think5\auth\model;
 
 
+use think\Config;
+
 class AuthRole extends \think\Model
 {
     // 设置完整的数据表（包含前缀）
     protected $name = 'auth_role';
 
-    //初始化属性
-    protected function initialize()
-    {
-
-    }
+	public function __construct($data = [])
+	{
+		//初始化参数
+		$this->name = Config::get('think5.database_prefix').$this->name;
+		parent::__construct($data);
+	}
 
     //一对多 权限授权
     public function authAccess()

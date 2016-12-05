@@ -2,16 +2,20 @@
 namespace think5\auth\model;
 
 
+use think\Config;
+
 class Menu extends \think\Model
 {
     // 设置完整的数据表（包含前缀）
     protected $name = 'menu';
 
-    //初始化属性
-    protected function initialize()
-    {
+	public function __construct($data = [])
+	{
+		//初始化参数
+		$this->name = Config::get('think5.database_prefix').$this->name;
+		parent::__construct($data);
+	}
 
-    }
 
     /**
      * 缓存后台菜单数据
